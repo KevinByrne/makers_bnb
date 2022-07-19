@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require_relative './lib/space'
 
 class McAirbnb < Sinatra::Base
   configure :development do
@@ -11,6 +12,8 @@ class McAirbnb < Sinatra::Base
   end
 
   get '/portal' do
+    @spaces = Space.all
+    erb :portal
   end
 
   post '/sign-up' do

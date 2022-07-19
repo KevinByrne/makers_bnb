@@ -20,6 +20,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.13.7-arm64-darwin)
       racc (~> 1.4)
+    pg (1.4.1)
     public_suffix (4.0.7)
     racc (1.6.0)
     rack (2.2.4)
@@ -59,12 +60,14 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  arm64-darwin-21
 
 DEPENDENCIES
   capybara
+  pg
   rspec
   sinatra
   sinatra-contrib
 
 BUNDLED WITH
-   2.3.16
+   2.3.15
