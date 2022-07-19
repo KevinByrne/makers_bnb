@@ -7,7 +7,7 @@ class McAirbnb < Sinatra::Base
   end
 
   get '/' do
-    'This is our landing page.'
+    erb :index
   end
 
   run! if app_file == $0
