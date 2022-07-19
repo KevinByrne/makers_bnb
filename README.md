@@ -29,3 +29,9 @@ Users should receive a text message to a provided number whenever one of the fol
  - Their request to book a space is denied
  - A ‘chat’ functionality once a space has been booked, allowing users whose space-booking request has been confirmed to chat with the user that owns that space
  - Basic payment implementation though Stripe.
+
+ <details>
+<summary>User Stories</summary>
+<br>
+
+</details>
