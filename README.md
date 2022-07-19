@@ -35,70 +35,61 @@ Users should receive a text message to a provided number whenever one of the fol
 <br>
 As a prospective user,<br>
 So that I can use the service,<br>
-I want to be able to create an account by signing up to the service.
+I want to be able to create an account by signing up to the service.<br>
+<br>
+As a signed up user,<br>
+So that I can advertise my property,<br>
+I want to be able to add my property to the website.<br>
+<br>
 
-As a signed up user,
-So that I can advertise my property,
-I want to be able to add my property to the website.
-
-As a User,
-In order to rent out more than one property,
-I want to be able to list multiple properties on the website.
-
-As a User,
-So that my property is easily identified,
-I want to be able to give my property a name.
-
-As a User,
-So that customers know about my property,
-I want to be able to give a short description of my property.
-
-As a User,
-So that customers know how much the fee is to hire,
-I want to be able to list a price per night.
-
-As an owner of a space
-To allow bookers to view up to date availability
-I want to be able to show a calendar of availability
-
-As a signed-up user
-To let an owner know I’m interested in hiring their space,
-I want to be able to send a request for any space for one night
-
-As an owner
-To know when someone is interested in booking my space
-I want to receive requests from signed-up users
-
-As an owner
-To have control over who stays in my space
-I want to approve bookings before they are confirmed
-
-As a MakersBnb user
-
-So that I know when a space is unavailable
-
-The dates when a space is unavailable should be displayed
-
-‌
-
-As a MakersBnb user
-
-So that I don’t try to double book a space
-
-Booked spaces should not be available to book
-
-‌
-
-As a MakersBnb host
-
-So that bookings for my space don’t overlap
-
-My space should be unavailable to other users for date range where it’s already been booked
-
-As a MakersBnb host
-
-So that booking requests are maximised
-
-My space should only be unlisted for a given date range when a booking has been confirmed
+As a User,<br>
+In order to rent out more than one property,<br>
+I want to be able to list multiple properties on the website.<br>
+<br>
+As a User,<br>
+So that my property is easily identified,<br>
+I want to be able to give my property a name.<br>
+<br>
+As a User,<br>
+So that customers know about my property,<br>
+I want to be able to give a short description of my property.<br>
+<br>
+As a User,<br>
+So that customers know how much the fee is to hire,<br>
+I want to be able to list a price per night.<br>
+<br>
+As an owner of a space<br>
+To allow bookers to view up to date availability<br>
+I want to be able to show a calendar of availability<br>
+<br>
+As a signed-up user<br>
+To let an owner know I’m interested in hiring their space,<br>
+I want to be able to send a request for any space for one night<br>
+<br>
+As an owner<br>
+To know when someone is interested in booking my space<br>
+I want to receive requests from signed-up users<br>
+<br>
+As an owner<br>
+To have control over who stays in my space<br>
+I want to approve bookings before they are confirmed<br>
+<br>
+As a MakersBnb user<br>
+So that I know when a space is unavailable<br>
+The dates when a space is unavailable should be displayed<br>
+<br>
+‌As a MakersBnb user<br>
+So that I don’t try to double book a space<br>
+Booked spaces should not be available to book<br>
+<br>
+‌As a MakersBnb host<br>
+So that bookings for my space don’t overlap<br>
+My space should be unavailable to other users for date range where it’s already been booked<br>
+<br>
+As a MakersBnb host<br>
+So that booking requests are maximised<br>
+My space should only be unlisted for a given date range when a booking has been confirmed<br>
 
 </details>
+
+
