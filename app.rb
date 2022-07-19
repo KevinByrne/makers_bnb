@@ -3,6 +3,8 @@ require 'sinatra/reloader'
 require_relative './lib/space'
 
 class McAirbnb < Sinatra::Base
+  enable :sessions
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -13,10 +15,13 @@ class McAirbnb < Sinatra::Base
 
   get '/portal' do
     @spaces = Space.all
+    @first_name = session[:first_name]
     erb :portal
   end
 
-  post '/sign-up' do
+  post '/signup' do
+    session[:first_name] = params[:first_name]
+    redirect '/portal'
   end
 
   post '/book' do
