@@ -33,8 +33,8 @@ Users should receive a text message to a provided number whenever one of the fol
  <details>
 <summary>User Stories</summary>
 <br>
-As a prospective user,
-So that I can use the service,
+As a prospective user,<br>
+So that I can use the service,<br>
 I want to be able to create an account by signing up to the service.
 
 As a signed up user,
