@@ -56,4 +56,21 @@ I want to be able to give a short description of my property.
 As a User,
 So that customers know how much the fee is to hire,
 I want to be able to list a price per night.
+
+As an owner of a space
+To allow bookers to view up to date availability
+I want to be able to show a calendar of availability
+
+As a signed-up user
+To let an owner know I’m interested in hiring their space,
+I want to be able to send a request for any space for one night
+
+As an owner
+To know when someone is interested in booking my space
+I want to receive requests from signed-up users
+
+As an owner
+To have control over who stays in my space
+I want to approve bookings before they are confirmed
+
 </details>
