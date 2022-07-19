@@ -73,4 +73,32 @@ As an owner
 To have control over who stays in my space
 I want to approve bookings before they are confirmed
 
+As a MakersBnb user
+
+So that I know when a space is unavailable
+
+The dates when a space is unavailable should be displayed
+
+‌
+
+As a MakersBnb user
+
+So that I don’t try to double book a space
+
+Booked spaces should not be available to book
+
+‌
+
+As a MakersBnb host
+
+So that bookings for my space don’t overlap
+
+My space should be unavailable to other users for date range where it’s already been booked
+
+As a MakersBnb host
+
+So that booking requests are maximised
+
+My space should only be unlisted for a given date range when a booking has been confirmed
+
 </details>
