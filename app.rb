@@ -16,7 +16,7 @@ class MakersBnb < Sinatra::Base
   get '/portal' do
     @first_name = session[:first_name]
     @booked_space = session[:booked_space]
-    @spaces = Space.all
+    @spaces = Space.available
     erb :portal
   end
 
