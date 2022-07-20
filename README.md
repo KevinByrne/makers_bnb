@@ -107,12 +107,15 @@ To setup the database:
 * Create the database using the psql command `CREATE DATABASE makersbnb;`
 * Connect to the database using the psql command `\c makersbnb`
 * Run the query saved in 01_create_spaces_table.sql
+* Run the query saved in add_availability_column.sql
 
 To setup the test database:
 * Connect to psql
 * Create the database using the psql command `CREATE DATABASE makersbnb_test;`
 * Connect to the database using the psql command `\c makersbnb_test`
 * Run the query saved in 01_create_spaces_table.sql
+* Run the query saved in add_availability_column.sql
+
 
 ```
 bundle install

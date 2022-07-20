@@ -1,5 +1,9 @@
 <h2>Welcome <%= @first_name %></h2><br>
 
+<% if @booked_space != nil %>
+  <h3> You have booked <%= @booked_space %>! </h3>
+<% end %>
+
 <% @spaces.each do |space| %>
   <%= space.name %>
   <form action="/book" method="post">
