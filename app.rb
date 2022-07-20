@@ -16,6 +16,7 @@ class MakersBnb < Sinatra::Base
   get '/portal' do
     @spaces = Space.all
     @first_name = session[:first_name]
+    @booked_space = session[:booked_space]
     erb :portal
   end
 
@@ -25,7 +26,8 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/book' do
-    p params
+    session[:booked_space] = params[:space]
+    redirect '/portal'
   end
 
   run! if app_file == $0

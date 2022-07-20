@@ -8,6 +8,6 @@ feature 'book a space' do
 
     click_button("Book Amy's space")
 
-    expect(page).to have_content("You've booked Amy's space!")
+    expect(page).to have_content("You have booked Amy's space!")
   end
 end
