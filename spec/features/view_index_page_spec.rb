@@ -1,5 +1,5 @@
-feature 'Viewing Index Page' do
-  scenario 'visits Index page' do
+feature 'viewing index page' do
+  scenario 'visit index page' do
     visit('/')
     expect(page).to have_content "Welcome to Makers BnB"
   end

@@ -9,7 +9,11 @@ class Space
   end
 
   def self.all
-    connection = PG.connect(dbname: 'makersbnb')
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
 
     spaces = connection.exec("SELECT name FROM spaces")
     spaces.map { |space| Space.new(name: space['name']) }

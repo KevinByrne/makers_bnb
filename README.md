@@ -14,21 +14,21 @@ We would like a web application that allows users to list spaces they have avail
  - Nights for which a space has already been booked should not be available for users to book that space.
  - Until a user has confirmed a booking request, that space can still be booked for that night.
 ## Nice-to-haves
-Users should receive an email whenever one of the following happens:
- - They sign up
- - They create a space
- - They update a space
- - A user requests to book their space
- - They confirm a request
- - They request to book a space
- - Their request to book a space is confirmed
- - Their request to book a space is denied
+ Users should receive an email whenever one of the following happens:
+  - They sign up
+  - They create a space
+  - They update a space
+  - A user requests to book their space
+  - They confirm a request
+  - They request to book a space
+  - Their request to book a space is confirmed
+  - Their request to book a space is denied
 Users should receive a text message to a provided number whenever one of the following happens:
- - A user requests to book their space
- - Their request to book a space is confirmed
- - Their request to book a space is denied
- - A ‘chat’ functionality once a space has been booked, allowing users whose space-booking request has been confirmed to chat with the user that owns that space
- - Basic payment implementation though Stripe.
+  - A user requests to book their space
+  - Their request to book a space is confirmed
+  - Their request to book a space is denied
+A ‘chat’ functionality once a space has been booked, allowing users whose space-booking request has been confirmed to chat with the user that owns that space
+Basic payment implementation though Stripe.
 
  <details>
 <summary>User Stories</summary>
@@ -42,19 +42,19 @@ So that I can advertise my property,<br>
 I want to be able to add my property to the website.<br>
 <br>
 
-As a User,<br>
+As a user,<br>
 In order to rent out more than one property,<br>
 I want to be able to list multiple properties on the website.<br>
 <br>
-As a User,<br>
+As a user,<br>
 So that my property is easily identified,<br>
 I want to be able to give my property a name.<br>
 <br>
-As a User,<br>
+As a user,<br>
 So that customers know about my property,<br>
 I want to be able to give a short description of my property.<br>
 <br>
-As a User,<br>
+As a user,<br>
 So that customers know how much the fee is to hire,<br>
 I want to be able to list a price per night.<br>
 <br>
@@ -92,4 +92,39 @@ My space should only be unlisted for a given date range when a booking has been 
 
 </details>
 
+## Getting started
 
+```
+git clone https://github.com/KevinByrne/makers_bnb.git
+```
+
+To setup the database:
+
+* Connect to psql
+* Create the database using the psql command `CREATE DATABASE makersbnb;`
+* Connect to the database using the psql command `\c makersbnb`
+* Run the query saved in 01_create_spaces_table.sql
+
+To setup the test database:
+* Connect to psql
+* Create the database using the psql command `CREATE DATABASE makersbnb_test;`
+* Connect to the database using the psql command `\c makersbnb_test`
+* Run the query saved in 01_create_spaces_table.sql
+
+```
+bundle install
+```
+
+## Usage
+
+```
+rackup
+```
+
+Navigate to `http://localhost:9292/`
+
+## Running tests
+
+```
+rspec
+```

@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require_relative './lib/space'
 
-class McAirbnb < Sinatra::Base
+class MakersBnb < Sinatra::Base
   enable :sessions
 
   configure :development do
