@@ -1,8 +1,8 @@
 feature 'book a space' do
   scenario 'user can book a space' do
     connection = PG.connect(dbname: 'makersbnb_test')
-    connection.exec("INSERT INTO spaces (name) VALUES ('Amy''s space');")
-    connection.exec("INSERT INTO spaces (name) VALUES ('Kev''s space');")
+    connection.exec("INSERT INTO spaces (name, available) VALUES ('Amy''s space', true);")
+    connection.exec("INSERT INTO spaces (name, available) VALUES ('Kev''s space', true);")
     
     visit '/portal'
 
