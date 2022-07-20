@@ -25,6 +25,7 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/book' do
+    p params
   end
 
   run! if app_file == $0
