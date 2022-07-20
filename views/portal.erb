@@ -1,7 +1,9 @@
-<h2>Welcome <%= @first_name %></h2><br><br>
+<h2>Welcome <%= @first_name %></h2><br>
 
-<ul>
-  <% @spaces.each do |space| %>
-    <li> <%= space.name %> </li>
-  <% end %>
-</ul>
+<% @spaces.each do |space| %>
+  <%= space.name %>
+  <form action="/book" method="post">
+    <input type="hidden" name="space" value="<%= space.name %>">
+    <input type="submit" value="Book <%= space.name %>">
+  </form><br>
+<% end %>
