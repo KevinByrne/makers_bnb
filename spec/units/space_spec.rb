@@ -26,4 +26,20 @@ RSpec.describe Space do
       expect(booked_space.available).to eq "f"
     end
   end
+
+  describe '#self.available' do
+    it 'returns list of available spaces' do
+      connection = PG.connect(dbname: 'makersbnb_test')
+      connection.exec("INSERT INTO spaces (name, available) VALUES ('Amy''s space', true);")
+      connection.exec("INSERT INTO spaces (name, available) VALUES ('Kev''s space', true);")
+      connection.exec("INSERT INTO spaces (name, available) VALUES ('Ollie''s space', true);")
+      
+      Space.book("Amy's space")
+      available_spaces = Space.available
+
+      expect(available_spaces[0].name).to eq("Kev's space")
+      expect(available_spaces[1].name).to eq("Ollie's space")
+      expect(available_spaces.length).to eq 2
+    end
+  end
 end

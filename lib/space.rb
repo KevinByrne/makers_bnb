@@ -36,5 +36,13 @@ class Space
   end
 
   def self.available
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+
+    available_spaces = connection.exec("SELECT name, available FROM spaces WHERE available = true")
+    available_spaces.map { |space| Space.new(name: space['name'], available: space['available']) }
   end
 end
