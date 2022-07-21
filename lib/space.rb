@@ -61,4 +61,8 @@ class Space
         )
     end
   end
+
+  def self.create(name, space_description, price)
+  
+  end
 end

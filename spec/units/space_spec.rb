@@ -44,4 +44,14 @@ RSpec.describe Space do
       expect(available_spaces.length).to eq 2
     end
   end
+
+  describe '#self.create' do
+    it 'creates a new space listing' do
+      new_space = Space.create("Murphy's couch", "A lovely comfy couch", "9.99")
+      expect(new_space.name).to eq("Murphy's couch")
+      expect(new_space.space_description).to eq("A lovely comfy couch")
+      expect(new_space.price).to eq(9.99)
+      expect(new_space.available).to eq("t")
+    end
+  end
 end
