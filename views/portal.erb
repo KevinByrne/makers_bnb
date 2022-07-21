@@ -11,3 +11,10 @@
     <input type="submit" value="Book <%= space.name %>">
   </form><br>
 <% end %>
+
+<form action="/spaces/new" method="post">
+  <input type="text" name="space_name">
+  <input type="text" name="space_description">
+  <input type="text" name="price">
+  <input type="submit" value="Add this space">
+</form><br>

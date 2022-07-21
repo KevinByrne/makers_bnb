@@ -31,5 +31,11 @@ class MakersBnb < Sinatra::Base
     redirect '/portal'
   end
 
+  post '/spaces/new' do
+    Space.create(params[:space_name], params[:space_description], params[:price])
+    redirect '/portal'
+  end
+
+
   run! if app_file == $0
 end
