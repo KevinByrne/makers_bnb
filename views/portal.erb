@@ -5,7 +5,7 @@
 <% end %>
 
 <% @spaces.each do |space| %>
-  <%= space.name %>
+  <%= "#{space.name} - #{space.space_description} - £#{'%.2f' % space.price} p/n" %>
   <form action="/book" method="post">
     <input type="hidden" name="space" value="<%= space.name %>">
     <input type="submit" value="Book <%= space.name %>">
