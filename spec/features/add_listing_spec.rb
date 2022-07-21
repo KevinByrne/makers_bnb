@@ -1,5 +1,5 @@
 feature 'add space to listings' do
-  xscenario 'user can add their space to the listings' do
+  scenario 'user can add their space to the listings' do
     visit('/portal')
     fill_in('space_name', with: "Murphy's couch")
     fill_in('space_description', with: "A lovely comfy couch")

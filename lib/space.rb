@@ -8,7 +8,7 @@ class Space
     @name = name
     @available = available
     @space_description = space_description
-    @price = price
+    @price = price.to_f
   end
 
   # def self.all
@@ -29,7 +29,7 @@ class Space
       connection = PG.connect(dbname: 'makersbnb')
     end
 
-    name = space_name.gsub("'", "''")
+    name = escape_char(space_name)
     result = connection.exec(
       "UPDATE spaces SET available = false WHERE name = '#{name}' RETURNING name, available, space_description, price"
       ).first
@@ -62,7 +62,32 @@ class Space
     end
   end
 
-  def self.create(name, space_description, price)
+  def self.create(space_name, space_description, price)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+
+    space_name = escape_char(space_name)
+    space_description = escape_char(space_description)
+
+    result = connection.exec(
+      "INSERT INTO spaces (name, available, space_description, price) VALUES ('#{space_name}', true, '#{space_description}', '#{price}') RETURNING name, available, space_description, price"
+      ).first
   
+    return Space.new(
+      name: result['name'], 
+      available: result['available'], 
+      space_description: result['space_description'], 
+      price: result['price']
+      )
   end
+  
+  def self.escape_char(text)
+    return text.gsub("'", "''")
+  end
+
+  private_class_method :escape_char
+
 end
