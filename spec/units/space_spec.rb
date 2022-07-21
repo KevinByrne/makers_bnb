@@ -39,9 +39,9 @@ RSpec.describe Space do
 
       expect(available_spaces[0].name).to eq("Kev's space")
       expect(available_spaces[0].space_description).to eq("A lovely house")
-      expect(available_spaces[0].price).to eq("200")
+      expect(available_spaces[0].price).to eq(200.00)
       expect(available_spaces[1].name).to eq("Ollie's space")
-      expect(available_spaces.length).to eq 2
+      expect(available_spaces.length).to eq(2)
     end
   end
 

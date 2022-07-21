@@ -1,9 +1,12 @@
-<h2>Welcome <%= @first_name %></h2><br>
+<h1>Welcome <%= @first_name %></h1><br>
 
-<% if @booked_space != nil %>
-  <h3> You have booked <%= @booked_space %>! </h3>
+<% if @bookings != nil %>
+  <h2> You have booked <%= @bookings.last %>! </h2>
+  <h3> Your bookings: <%= @bookings.join(', ') %></h3><br>
 <% end %>
 
+<h2>Available Spaces: </h2>
+<br>
 <% @spaces.each do |space| %>
   <%= "#{space.name} - #{space.space_description} - £#{'%.2f' % space.price} p/n" %>
   <form action="/book" method="post">
@@ -12,9 +15,10 @@
   </form><br>
 <% end %>
 
+<h3>Add your own space!</h3>
 <form action="/spaces/new" method="post">
-  <input type="text" name="space_name">
-  <input type="text" name="space_description">
-  <input type="text" name="price">
-  <input type="submit" value="Add this space">
+  Name of your space: <br><input type="text" name="space_name"><br>
+  Describe your space: <br><input type="text" name="space_description"><br>
+  Cost per night: <br>£<input type="text" name="price"><br><br>
+  <input type="submit" value="Add this space"><br>
 </form><br>
