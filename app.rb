@@ -26,7 +26,7 @@ class MakersBnb < Sinatra::Base
 
   post '/book' do
     Space.book(params[:space])
-    session[:bookings] = [] if session[:bookings] == nil
+    session[:bookings] = [] if session[:bookings].nil?
     session[:bookings] << params[:space]
     redirect '/confirmation'
   end

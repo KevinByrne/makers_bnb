@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/amyoconnor/Projects/MakersBNB/makers_bnb/spec/features/add_listing_spec.rb": {
+      "/Users/olliefreeman/Projects/MakersBnb/makers_bnb/spec/features/add_listing_spec.rb": {
         "lines": [
           1,
           1,
@@ -17,7 +17,7 @@
           null
         ]
       },
-      "/Users/amyoconnor/Projects/MakersBNB/makers_bnb/spec/features/book_spec.rb": {
+      "/Users/olliefreeman/Projects/MakersBnb/makers_bnb/spec/features/book_spec.rb": {
         "lines": [
           1,
           1,
@@ -68,7 +68,7 @@
           null
         ]
       },
-      "/Users/amyoconnor/Projects/MakersBNB/makers_bnb/spec/features/sign_up_spec.rb": {
+      "/Users/olliefreeman/Projects/MakersBnb/makers_bnb/spec/features/sign_up_spec.rb": {
         "lines": [
           1,
           1,
@@ -81,7 +81,7 @@
           null
         ]
       },
-      "/Users/amyoconnor/Projects/MakersBNB/makers_bnb/spec/features/view_index_page_spec.rb": {
+      "/Users/olliefreeman/Projects/MakersBnb/makers_bnb/spec/features/view_index_page_spec.rb": {
         "lines": [
           1,
           1,
@@ -91,7 +91,7 @@
           null
         ]
       },
-      "/Users/amyoconnor/Projects/MakersBNB/makers_bnb/spec/features/view_listings_spec.rb": {
+      "/Users/olliefreeman/Projects/MakersBnb/makers_bnb/spec/features/view_listings_spec.rb": {
         "lines": [
           1,
           1,
@@ -123,7 +123,7 @@
           null
         ]
       },
-      "/Users/amyoconnor/Projects/MakersBNB/makers_bnb/spec/units/space_spec.rb": {
+      "/Users/olliefreeman/Projects/MakersBnb/makers_bnb/spec/units/space_spec.rb": {
         "lines": [
           1,
           1,
@@ -185,6 +185,6 @@
         ]
       }
     },
-    "timestamp": 1658488159
+    "timestamp": 1658498131
   }
 }
