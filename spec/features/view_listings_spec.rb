@@ -5,7 +5,7 @@ feature 'view listings' do
     connection.exec("INSERT INTO spaces (name, available, space_description, price) VALUES ('Kev''s space', true, 'A lovely house', 200.00);")
     connection.exec("INSERT INTO spaces (name, available, space_description, price) VALUES ('Ollie''s space', true, 'A not so lovely flat', 10.25);")
     
-    visit '/portal'
+    visit '/spaces'
 
     expect(page).to have_content("Amy's space - A lovely flat - £150.50 p/n")
     expect(page).to have_content("Kev's space - A lovely house - £200.00 p/n")
@@ -19,7 +19,7 @@ feature 'view listings' do
     connection.exec("INSERT INTO spaces (name, available, space_description, price) VALUES ('Kev''s space', true, 'A lovely house', 200.00);")
     connection.exec("INSERT INTO spaces (name, available, space_description, price) VALUES ('Ollie''s space', true, 'A not so lovely flat', 10.25);")
     
-    visit '/portal'
+    visit '/spaces'
     click_button("Book Amy's space")
 
     expect(page).to have_no_button("Book Amy's space")

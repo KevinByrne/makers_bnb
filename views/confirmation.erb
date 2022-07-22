@@ -1,0 +1,14 @@
+<% if @bookings != nil %>
+  <h1> You have booked <%= @bookings.last %>! </h1>
+  <h2> Your bookings: </h2>
+  <h3><ul>
+    <% @bookings.each do |booking| %>
+      <li><%= booking %></li>
+    <% end %>
+  </ul></h3>
+<% end %>
+<br>
+<br>
+<form action="/spaces" method="get">
+  <input type="submit" value="Return to view all available Spaces">
+</form>

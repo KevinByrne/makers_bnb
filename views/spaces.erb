@@ -1,0 +1,21 @@
+<h1>Welcome <%= @first_name %></h1><br>
+<form action="/confirmation" method="get">
+  <input type="submit" value="View your bookings">
+</form>
+<br>
+<h2>Available Spaces: </h2>
+<br>
+<% @spaces.each do |space| %>
+  <%= "#{space.name} - #{space.space_description} - £#{'%.2f' % space.price} p/n" %>
+  <form action="/book" method="post">
+    <input type="hidden" name="space" value="<%= space.name %>">
+    <input type="submit" value="Book <%= space.name %>">
+  </form>
+<% end %>
+<br><br>
+
+<h2>Got a space to list?</h2>
+<form action="/spaces/new" method="get">
+  <input type="submit" value="Add your own space">
+</form>
+
