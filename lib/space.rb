@@ -31,7 +31,8 @@ class Space
 
     name = escape_char(space_name)
     result = connection.exec(
-      "UPDATE spaces SET available = false WHERE name = '#{name}' RETURNING name, available, space_description, price"
+      "UPDATE spaces SET available = false WHERE name = '#{name}'
+      RETURNING name, available, space_description, price"
       ).first
     
     return Space.new(
@@ -73,7 +74,9 @@ class Space
     space_description = escape_char(space_description)
 
     result = connection.exec(
-      "INSERT INTO spaces (name, available, space_description, price) VALUES ('#{space_name}', true, '#{space_description}', '#{price}') RETURNING name, available, space_description, price"
+      "INSERT INTO spaces (name, available, space_description, price) 
+      VALUES ('#{space_name}', true, '#{space_description}', '#{price}') 
+      RETURNING name, available, space_description, price"
       ).first
   
     return Space.new(
