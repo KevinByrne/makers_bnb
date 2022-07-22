@@ -13,30 +13,37 @@ class MakersBnb < Sinatra::Base
     erb :index
   end
 
-  get '/portal' do
+  get '/spaces' do
     @first_name = session[:first_name]
-    @bookings = session[:bookings]
     @spaces = Space.available
-    erb :portal
+    erb :spaces
   end
 
   post '/signup' do
     session[:first_name] = params[:first_name]
-    redirect '/portal'
+    redirect '/spaces'
   end
 
   post '/book' do
     Space.book(params[:space])
     session[:bookings] = [] if session[:bookings] == nil
     session[:bookings] << params[:space]
-    redirect '/portal'
+    redirect '/confirmation'
   end
 
   post '/spaces/new' do
     Space.create(params[:space_name], params[:space_description], params[:price])
-    redirect '/portal'
+    redirect '/spaces'
   end
 
+  get '/spaces/new' do
+    erb :new
+  end
+
+  get '/confirmation' do
+    @bookings = session[:bookings]
+    erb :confirmation
+  end
 
   run! if app_file == $0
 end
